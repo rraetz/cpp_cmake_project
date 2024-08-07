@@ -17,6 +17,7 @@ add_definitions(-D MY_DEFINTION)
 
 # Define paths
 set(INCLUDE_DIR include) 
+set(PLOG_INCLUDE_DIR libs/plog/include)
 
  
 # Find libraries 
@@ -26,11 +27,13 @@ find_package(Threads REQUIRED)
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${INCLUDE_DIR})
+include_directories(${PLOG_INCLUDE_DIR})
 
 
 # Add executables for main project
 add_executable(${PROJECT_NAME} 
     src/main.cpp
+    src/logging.cpp
 )
 
 # Link libraries

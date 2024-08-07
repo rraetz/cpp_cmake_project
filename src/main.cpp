@@ -1,7 +1,8 @@
-#include <iostream>
+#include "logging.h"
 
 int main(int argc, char const *argv[])
 {
-    std::cout << "Hello World" << std::endl;
+    init_logging();
+    LOG_INFO << "Hello World";
     return 0;
 }
